@@ -35,3 +35,19 @@ To run Zaapplocally, follow these steps:
 4. Start the development server:
    ```bash
    npm start
+
+# Usage
+## Dashboard
+The dashboard gives users an overview of their account balance, recent transactions, and investment options. It is designed to provide easy access to key features like savings goals, stocks, and mutual fund investments.
+
+## Savings Goals
+- **Create Goals:** Set up multiple savings plans by specifying a goal name and target amount.
+- **Add Funds:** Contribute to your savings goals, deducted from your current balance and record the transaction.
+- **Withdraw Funds:** Withdraw money once the goal target is reached, returning funds to your current balance.
+- **Delete Goals:** Remove savings goals, provided the current amount saved is zero.
+## Invest in Stocks
+- **Select Stocks:** Choose from a list of available stocks, each with a defined percentage return.
+- **Invest and Calculate Returns:** Invest in stocks over predefined durations (1 day, 3 days, 1 week) and see projected returns.
+## Invest in Mutual Funds
+- **Choose Funds:** Select from various mutual funds with different percentage returns.
+- **Custom Investment Durations:** Choose from preset durations (3 months, 6 months, 1 year) or specify a custom duration to calculate potential returns.

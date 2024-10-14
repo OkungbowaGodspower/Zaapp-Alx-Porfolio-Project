@@ -54,4 +54,4 @@ The dashboard gives users an overview of their account balance, recent transacti
 
 ## Author
 the author of this project include:
-- Okungbowa Godspower rr<godspowerokungbowa0@gmail.com> (https://github.com/OkungbowaGodspower)
+- Okungbowa Godspower <godspowerokungbowa0@gmail.com> (https://github.com/OkungbowaGodspower)

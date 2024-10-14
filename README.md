@@ -22,7 +22,16 @@ Zaapp is a financial management app that helps users manage their savings goals,
 - **Error Handling with Modals**: User feedback is presented via modals for validation errors and successful operations.
 
 ## Installation
-To run Zaapaa locally, follow these steps:
+To run Zaapplocally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/OkungbowaGodspower/Zaapp-Alx-Porfolio-Project.git
+2. Navigate into the directory:
+   ```bash
+   cd zaapp
+3. Install the dependencies:
+   ```bash
+   npm install
+4. Start the development server:
+   ```bash
+   npm start

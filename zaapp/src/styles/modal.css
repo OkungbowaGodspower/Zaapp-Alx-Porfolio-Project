@@ -1,0 +1,61 @@
+.modal.fade.show {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  -webkit-backdrop-filter: blur(5px); /* Support for Safari */
+  backdrop-filter: blur(5px);
+  color: var(--secondary-color-mid);
+}
+
+.modal-dialog {
+  max-width: 500px;
+  margin: 2.75rem auto;
+}
+
+.modal-content {
+  border-radius: 11px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+.times {
+  background-color: rgb(182, 50, 50);
+  width: 10px;
+  height: 10px;
+  padding: 0px 5px;
+  border-radius: 0.5rem;
+  color: var(--white);
+}
+.modal-body {
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.modal-footer .btn-secondary {
+  padding: 0.5rem 1rem !important;
+  color: var(--secondary-color-mid);
+  font-size: 1.5rem !important;
+  border: none;
+  color: var(--white);
+  background-color: #ff3333 !important;
+}
+.modal-footer .btn-primary {
+  padding: 0.5rem 1rem !important;
+  color: var(--secondary-color-mid);
+  font-size: 1.5rem !important;
+  border: none;
+  color: var(--white);
+  background-color: #339933 !important;
+}
+.close {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+}

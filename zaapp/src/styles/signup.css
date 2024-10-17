@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
   max-width: 120rem;
   margin: 0 auto;
   position: relative;
@@ -134,7 +134,7 @@ form .btn {
 }
 
 .login-link {
-  color: #40196d;
+  color: #0066f5;
   font-size: 1.2rem;
   text-decoration: none;
 }

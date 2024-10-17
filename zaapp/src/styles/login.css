@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
   max-width: 120rem;
   margin: 0 auto;
   position: relative;
@@ -137,14 +137,16 @@ form .btn {
   transition: all 0.3s;
 }
 
-.signup-link {
-  color: #40196d;
+.signup-link,
+.forgot-password-link {
+  color: #0066f5;
   font-size: 1.2rem;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-.signup-link:hover {
-  text-decoration: underline;
+.signup-link,
+.forgot-password-link:hover {
+  text-decoration: underline !important;
 }
 
 /********************/

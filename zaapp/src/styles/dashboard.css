@@ -22,7 +22,7 @@ html {
 /* Sidebar base styles */
 .sidebar {
   width: 60px; /* Collapsed width */
-  height: 100vh;
+  height: 100dvh;
   background-color: #f5f6fa;
   position: fixed;
   transition: width 0.3s ease;
@@ -358,7 +358,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 46, 101, 0.5) !important;
+  background: #00000080 !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,7 +452,8 @@ html {
 .transfer-funds,
 .success-button,
 .apply-investment,
-.add-goal {
+.add-goal,
+.save-change {
   background-color: var(--primary-color);
   box-shadow: 0 4px 6px 1px rgba(0, 102, 245, 0.18);
 }
@@ -462,12 +463,15 @@ html {
 .close-modal-button,
 .close-button,
 .delete-plan,
-.alert-modal {
+.alert-modal,
+.cancel-button,
+.cancel-withdraw {
   background-color: #ff3333;
   box-shadow: 0 4px 6px 1px rgba(0, 102, 245, 0.18);
 }
 
-.withdraw {
+.withdraw,
+.confirm-withdraw {
   background-color: green;
   box-shadow: 0 4px 6px 1px rgba(0, 102, 245, 0.18);
 }
@@ -475,6 +479,10 @@ html {
   background-color: white;
   color: var(--primary-color) !important;
   border: 1px solid var(--primary-color) !important;
+}
+
+.button-padding {
+  margin-bottom: 3rem;
 }
 
 .thumbs {
@@ -586,7 +594,12 @@ html {
   max-height: 300px; /* Adjust as needed */
   overflow-y: auto;
 }
-
+.settings label {
+  display: block;
+}
+/* .settings-more {
+  margin-right: 2rem;
+}  */
 /* addTransaction({ 409
           type: "withdraw",
           amount: `₦${goal.currentAmount}`,

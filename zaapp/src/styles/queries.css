@@ -1,8 +1,8 @@
-/* ?rem and em do not depend on html font-size in media queries */
+/* !rem and em do not depend on html font-size in media queries */
 
-/* ?to convert the rem, divide (e.g 1200px) it by 16px */
+/* !to convert the rem, divide (e.g 1200px) it by 16px */
 
-/* ?TO GET THE MAX WIDTH (NUMBER IN REM / 16PX THEN RESULT * 10PX */
+/* !TO GET THE MAX WIDTH (NUMBER IN REM / 16PX THEN RESULT * 10PX */
 
 /********************/
 /* BELOW 1344PX (FOR SMALLER (DESKTOPS) COMPUTER)*/
@@ -117,10 +117,6 @@
     background-color: var(--white);
     z-index: 2000;
     position: absolute;
-
-    /* ?backdrop-filter: blur(10px); */
-    /* ?-webkit-backdrop-filter: blur(10px); */
-
     top: 0px;
     left: 0;
     width: 100%;
@@ -134,10 +130,6 @@
     transform: translateX(100%);
 
     /* !HIDE NAVIGATION */
-    /* ?Allow No Transition at all */
-    /* ?display: none; */
-
-    /* !1) HIDE IT VISUALLY */
     opacity: 0;
 
     /* !2) MAKE IT UNACCESSIBLE TO MOUSE AND KEYBOARD */

@@ -1,68 +1,3 @@
-/*
----- 01 TYPOGRAPHY SYSTEM
-
-        - FONT SIZE SYSTEM (px)
-        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-        - FONT WEIGHT: 
-        Default: 400
-        Bold: 500
-        Semi-bold: 600
-        Bold: 700
-
-        - LINE HEIGHT: 
-        Default: 1
-        Small: 1.05
-        medium: 1.2px
-        Paragraph default: 1.6
-        Large: 1.8
-
-        - LETTER SPACING:
-        Default: 0
-        Small: - 0.5px
-        Paragraph default: 0.7px
-
-
----- 02 COLORS
-        PRIMARY COLOR: #6655da
-
-        - TINTS: #332b6d, #9488e5
-        - ACCENTS:
-        - GREY: #555, #333, #ddd, #888, #6f6f6f
-
-
----- 03 LAYOUT
-
----- 04 BORDER-RADIUS
-Default: 9px
-medium: 11px
-
----- 06 ICONS
-
----- 07 SHADOWS
-box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-box-shadow: 0 2.2rem 6.4rem rgba(0, 0, 0, 0.06);
----- 05 WHITE SPACE
-
-        - SPACING SYSTEM (px)
-        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
-
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-/* Primary color */
 :root {
   --primary-color: #0066f5;
   --primary-color-mid: #0a2e65;
@@ -84,50 +19,8 @@ html {
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* Apply primary color to Bootstrap components */
-/* .btn-primary {
-  background-color: var(--primary-color-light);
-  border-color: var(--primary-color-light);
-}
-
-.btn-primary:hover {
-  background-color: darken(var(--primary-color-light), 10%);
-  border-color: darken(var(--primary-color-light), 10%);
-}
-
-.card {
-  background-color: var(--secondary-color-light);
-  border-color: var(--secondary-color-mid);
-}
-
-.card-header,
-.card-footer {
-  background-color: var(--secondary-color-dark);
-  color: var(--secondary-color-light);
-}
-
-.btn-secondary {
-  background-color: var(--secondary-color-mid);
-  border-color: var(--secondary-color-mid);
-}
-
-.btn-secondary:hover {
-  background-color: darken(var(--secondary-color-mid), 10%);
-  border-color: darken(var(--secondary-color-mid), 10%);
-}
-
-.alert-success {
-  background-color: var(--sub-secondary-color-green);
-  color: var(--secondary-color-light);
-}
-
-.alert-danger {
-  background-color: var(--sub-secondary-color-orange);
-  color: var(--secondary-color-light);
-} */
-
 /*! *********************************** */
-/* Add additional styles as needed */
+
 /********************/
 /* HEADER */
 /********************/
@@ -139,6 +32,7 @@ html {
   height: 9.6rem;
   padding: 0 4.8rem;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -162,7 +56,7 @@ html {
 .main-nav-link:visited {
   text-decoration: none;
   color: var(--secondary-color-mid);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   transition: all 0.3s;
 }
@@ -230,6 +124,7 @@ html {
   background-color: var(--white);
   z-index: 9999;
   box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
+  transition: top 0.3s ease-in-out;
 }
 
 .sticky .section-hero {
@@ -319,7 +214,8 @@ html {
 /********************/
 
 .section-featured {
-  padding: 4.8rem 0 4.8rem 0;
+  /* padding: 4.8rem 0 4.8rem 0; */
+  padding: 4.8rem 0 9.6rem 0;
   background-color: var(--secondary-color);
 }
 
@@ -434,7 +330,9 @@ html {
 /********************/
 
 .section-meals {
-  padding: 9.6rem 0;
+  /* padding: 9.6rem 0; */
+  padding: 4.8rem 0 9.6rem 0;
+  margin-top: 4.8rem;
   background-color: var(--secondary-color);
 }
 
@@ -473,7 +371,6 @@ html {
 }
 
 .tag--zaapp {
-  /* background-color: var(--primary-color); */
   color: var(--primary-color);
   border-radius: 50%;
   letter-spacing: 0.1px;
@@ -544,6 +441,7 @@ ul.meal-attributes {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .testimonials-container {
@@ -568,6 +466,9 @@ ul.meal-attributes {
   line-height: 1.8;
   margin-bottom: 1.8rem;
   color: var(--secondary-color-mid);
+}
+q {
+  font-style: italic;
 }
 
 .testimonial-name {
@@ -602,7 +503,7 @@ ul.meal-attributes {
 /********************/
 
 .section-pricing {
-  padding: 4.8rem 0;
+  padding: 0;
 }
 
 .pricing-plan {
@@ -707,7 +608,7 @@ ul.meal-attributes {
 /********************/
 
 .section-cta {
-  padding: 4.8rem 0 12.8rem;
+  padding: 0 0 9.6rem 0;
 }
 
 .cta {
@@ -769,7 +670,7 @@ ul.meal-attributes {
 .cta-form input,
 .cta-form select {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.5rem;
   font-size: 1.6rem;
   font-family: inherit;
   border: none;
@@ -787,12 +688,22 @@ ul.meal-attributes {
   color: var(--secondary-color-mid);
 }
 
+.custom-select {
+  padding: 5px 10px;
+  appearance: none;
+  background: url(https://www.svgrepo.com/show/7882/down-arrow.svg) no-repeat
+    right center;
+  background-size: 16px 16px;
+  background-position: right 20px center;
+  background-color: var(--white);
+}
 /********************/
 /* FOOTER SECTION */
 /********************/
 
 .section-footer {
-  padding: 12.8rem 0;
+  padding: 12.8rem 0 3rem 0;
+
   border-top: 1px solid var(--secondary-color);
 }
 
@@ -808,7 +719,7 @@ ul.meal-attributes {
 }
 
 .footer-logo .logo {
-  font-size: 12rem;
+  font-size: 3.5rem !important;
 }
 
 .logo-col {
@@ -819,7 +730,7 @@ ul.meal-attributes {
 .social-links {
   list-style: none;
   display: flex;
-  gap: 2.4rem;
+  gap: 1.4rem;
 }
 
 .social-links ion-icon {
@@ -853,7 +764,7 @@ ul.social-links {
 
 .contacts {
   font-style: normal;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 
@@ -868,7 +779,7 @@ ul.social-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1.4rem;
 }
 
 ul.footer-nav {
@@ -878,7 +789,7 @@ ul.footer-nav {
 .footer-link:link,
 .footer-link:visited {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--secondary-color-mid);
   transition: all 0.3s;
 }

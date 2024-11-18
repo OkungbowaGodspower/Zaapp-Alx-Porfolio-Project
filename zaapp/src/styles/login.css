@@ -8,9 +8,8 @@
   position: relative;
 }
 
-.login-logo {
-  /* margin: 0; */
-  margin-top: -60%;
+a .login-logo {
+  margin-top: -30%;
   left: 0%;
   position: absolute;
   font-size: 3.8rem !important;
@@ -26,6 +25,7 @@
   max-width: 600px;
   margin: 0 auto;
 }
+
 .card *:focus {
   outline: none;
 }
@@ -42,16 +42,16 @@
 
 .header-text {
   font-size: 6rem;
-  font-weight: 900;
-  letter-spacing: 0px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-top: -26%;
 }
 
 .action-text {
-  font-size: 1.8rem;
-  font-size: 600;
+  font-size: 1.6rem;
   margin-top: -20px;
   color: var(--secondary-color-mid);
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
@@ -60,7 +60,7 @@ label {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
-  color: var(--primary-color);
+  color: var(--primary-color-mid);
 }
 
 .form-group {
@@ -93,13 +93,15 @@ form .form-check {
   margin-bottom: 2.4rem;
   font-size: 1.6rem;
 }
+
 .form-check-label {
   margin: 5px 0 0 5px;
   color: var(--secondary-color-mid);
   font-size: 1.2rem;
 }
 
-form .btn {
+form .btn,
+.btn {
   display: inline-block;
   padding: 1.6rem 1.2rem;
   border-radius: 9px;
@@ -107,12 +109,18 @@ form .btn {
   text-decoration: none;
   transition: all 0.3s;
   font-weight: 400;
-
-  /* Only necessary for the .btn itself */
   cursor: pointer;
   border: none;
   font-family: inherit;
+}
+
+form .btn {
   width: 100%;
+}
+
+.title {
+  font-size: 2rem !important;
+  color: #0a2e65 !important;
 }
 
 .btn-primary {
@@ -137,6 +145,17 @@ form .btn {
   transition: all 0.3s;
 }
 
+.password-toggle {
+  color: var(--secondary-color-mid);
+  font-size: 1.6rem;
+  position: absolute;
+  right: 7rem !important;
+  transform: translateY(-50%);
+  top: 4rem !important;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 .signup-link,
 .forgot-password-link {
   color: #0066f5;
@@ -146,7 +165,11 @@ form .btn {
 
 .signup-link,
 .forgot-password-link:hover {
-  text-decoration: underline !important;
+  text-decoration: none !important;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 /********************/
@@ -157,16 +180,20 @@ form .btn {
   html {
     font-size: 56.25%;
   }
+
   .login-logo {
     left: 5%;
   }
+
   .header-text {
     margin-left: 7%;
+    margin-top: -25%;
     font-size: 6rem;
     width: 600px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .action-text {
     margin-left: 7%;
   }
@@ -180,16 +207,20 @@ form .btn {
   html {
     font-size: 56.25%;
   }
+
   .container-login {
     display: block;
   }
-  .login-logo {
+
+  a .login-logo {
     margin-top: 0%;
     left: 0%;
     position: relative;
     display: block;
     padding: 9% 0 0 5%;
+    text-decoration: none;
   }
+
   .header-text {
     margin: 0 auto;
     font-size: 6rem;
@@ -200,6 +231,7 @@ form .btn {
     padding-top: 10%;
     width: 100%;
   }
+
   .action-text {
     margin: 0 auto;
     overflow: hidden;
@@ -225,6 +257,7 @@ form .btn {
   .header-text {
     font-size: 3rem;
   }
+
   .password-toggle-icon {
     top: 40.8rem;
     right: 18rem;
@@ -239,6 +272,7 @@ form .btn {
   .header-text {
     font-size: 3rem;
   }
+
   .password-toggle-icon {
     top: 36.8rem !important;
     right: 18rem;

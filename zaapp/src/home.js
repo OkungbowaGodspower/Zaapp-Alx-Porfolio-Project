@@ -1,4 +1,3 @@
-// import { IonIcon } from "@ionic/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/index.css";
@@ -31,51 +30,8 @@ function Home() {
   };
   return (
     <div className="body">
-      {/* <header className="header">
-        <h1 className="logo">Zaapp</h1>
-        <nav className="main-nav">
-          <ul className="main-nav-list">
-            <li>
-              <a href="/" className="main-nav-link">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="./404.html" className="main-nav-link">
-                About <span className="dd">&#9660;</span>
-              </a>
-            </li>
-            <li>
-              <a href="./404.html" className="main-nav-link">
-                Services <span className="dd">&#9660;</span>
-              </a>
-            </li>
-            <li>
-              <a href="./404.html" className="main-nav-link">
-                Company <span className="dd">&#9660;</span>
-              </a>
-            </li>
-            <li>
-              <a href="/login" className="main-nav-link blank">
-                Sign In
-              </a>
-            </li>
-            <li>
-              <a href="/signup" className="main-nav-link nav-cta">
-                Sign Up For Free
-              </a>
-            </li>
-          </ul>
-        </nav> */}
-      {/* <button className="btn-mobile-nav">
-          <IonIcon name="menu-outline" className="icon-mobile-nav" />
-          <IonIcon name="close-outline" className="icon-mobile-nav" />
-        </button> */}
-      {/* <button className="btn-mobile-nav">
-          <ion-icon name="menu-outline" className="icon-mobile-nav"></ion-icon>
-          <ion-icon name="close-outline" className="icon-mobile-nav"></ion-icon>
-        </button>
-      </header> */}
+      <div className="sentinel"></div>{" "}
+      {/* This will be the reference point for sticky */}
       <header className={`header ${isOpen ? "nav-open" : ""}`}>
         <h1 className="logo">Zaapp</h1>
         <nav className={`main-nav ${isOpen ? "nav-open" : ""}`}>
@@ -118,7 +74,6 @@ function Home() {
           <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
         </button>
       </header>
-
       {/* <main> */}
       <section className="section-hero">
         <div className="hero">
@@ -157,7 +112,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       <section className="section-featured" id="learn">
         <div className="container">
           <h2 className="heading-featured-in">As featured in</h2>
@@ -170,7 +124,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       <section className="section-how" id="how-it-works">
         <div className="container">
           <h2 className="heading-secondary">Why choose Zaapp?</h2>
@@ -205,13 +158,12 @@ function Home() {
             </p>
             <h3 className="heading-tertiary">Loans</h3>
             <p className="step-description">
-              Get up to ₦1,000,000 in your Zaapp account easily and repay in
+              Get up to ₦1,000,000 in your account easily and repay in
               convenient installments.
             </p>
           </div>
         </div>
       </section>
-
       <section className="section-meals" id="meals">
         <div className="container center-text">
           <h2 className="heading-secondary">
@@ -272,7 +224,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       <section className="section-testimonial" id="testimonial">
         <div className="testimonials-container">
           <h2 className="heading-secondary">Why not give it a try?</h2>
@@ -284,8 +235,10 @@ function Home() {
                 className="testimonial-img"
               />
               <blockquote className="testimonial-text">
-                This is the best banking app! I’m enjoying seamless banking plus
-                the free transfers to other users is a thing of joy.
+                <q className="quote">
+                  This is the best banking app! I’m enjoying seamless banking
+                  plus the free transfers to other users is a thing of joy.
+                </q>
               </blockquote>
               <p className="testimonial-name">&mdash; Dave</p>
             </figure>
@@ -297,8 +250,10 @@ function Home() {
                 className="testimonial-img"
               />
               <blockquote className="testimonial-text">
-                Just joined the best Digital Bank in Nigeria I have no
-                complaints whatsoever since I started using Zaapp.
+                <q>
+                  Just joined the best Digital Bank in Nigeria I have no
+                  complaints whatsoever since I started using Zaapp.
+                </q>
               </blockquote>
               <p className="testimonial-name">&mdash; Ben</p>
             </figure>
@@ -310,9 +265,11 @@ function Home() {
                 className="testimonial-img"
               />
               <blockquote className="testimonial-text">
-                Definitely worthy of a five star rating, kudos to Zaapp. They
-                are wonderful and unique in every aspect I highly recommend this
-                app for everyone.
+                <q>
+                  Definitely worthy of a five star rating, kudos to Zaapp. They
+                  are wonderful and unique in every aspect I highly recommend
+                  this app for everyone.
+                </q>
               </blockquote>
               <p className="testimonial-name">&mdash; Steve</p>
             </figure>
@@ -324,17 +281,17 @@ function Home() {
                 className="testimonial-img"
               />
               <blockquote className="testimonial-text">
-                The loan process is incredible, very convenient for emergency
-                situations, Zaapp helped me so much!
+                <q>
+                  The loan process is incredible, very convenient for emergency
+                  situations, Zaapp helped me so much!
+                </q>
               </blockquote>
               <p className="testimonial-name">&mdash; Hannah</p>
             </figure>
           </div>
         </div>
       </section>
-
       <section className="section-pricing" id="pricing"></section>
-
       <section className="section-cta" id="cta">
         <div className="container">
           <div className="cta">
@@ -347,11 +304,22 @@ function Home() {
               </p>
               <form className="cta-form" name="sign-up" netlify="true">
                 <div>
-                  <label htmlFor="full-name">Full name</label>
+                  <label htmlFor="full-name">First name</label>
                   <input
                     id="full-name"
                     type="text"
-                    placeholder="John Smith"
+                    placeholder="Okungbowa"
+                    name="full-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="full-name">Last name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="God'spower"
                     name="full-name"
                     required
                   />
@@ -372,7 +340,12 @@ function Home() {
                   <label htmlFor="select-where">
                     Where did you learn about us?
                   </label>
-                  <select id="select-where" name="select-where" required>
+                  <select
+                    id="select-where"
+                    name="select-where"
+                    className="custom-select"
+                    required
+                  >
                     <option value="">Choose an option:</option>
                     <option value="family">Family and friends</option>
                     <option value="instagram">Instagram</option>
@@ -397,7 +370,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       <footer className="section-footer">
         <div className="container grid grid--footer">
           <div className="logo-col">

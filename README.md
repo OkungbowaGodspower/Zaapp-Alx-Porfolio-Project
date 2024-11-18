@@ -9,7 +9,6 @@ Zaapp is a comprehensive financial management app designed to help users effecti
 - [Usage](#usage)
   - [Dashboard](#dashboard)
   - [Savings Goals](#savings-goals)
-  - [Invest in Stocks](#invest-in-stocks)
   - [Invest in Mutual Funds](#invest-in-mutual-funds)
   - [Transaction History](#transaction-history)
 - [Contributing](#contributing)

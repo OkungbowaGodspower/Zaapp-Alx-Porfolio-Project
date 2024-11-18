@@ -9,7 +9,6 @@ Zaapp is a comprehensive financial management app designed to help users effecti
 - [Usage](#usage)
   - [Dashboard](#dashboard)
   - [Savings Goals](#savings-goals)
-  - [Invest in Stocks](#invest-in-stocks)
   - [Invest in Mutual Funds](#invest-in-mutual-funds)
   - [Transaction History](#transaction-history)
 - [Contributing](#contributing)
@@ -71,11 +70,41 @@ The dashboard provides a clear overview of your financial activities:
 
 ### Invest in Mutual Funds
 
-- **Choose Funds:** Select from various mutual funds with different percentage returns.
-- **Custom Investment Durations:** Choose from preset durations (3 months, 6 months, 1 year) or specify a custom duration to calculate potential returns.
+- **Explore Mutual Funds**: Choose from a variety of funds with percentage-based returns.
+- **Flexible Durations**: Select a predefined duration (3 months, 6 months, 1 year) or set a custom period.
+- **Projected Returns**: See an estimate of potential returns before investing.
+
+### Transaction History
+
+- **View Records**: Access a detailed table of all transactions, including:
+  - Savings goal contributions and withdrawals.
+  - Stock and mutual fund investments.
+  - Fund transfers and more.
+- **Date Formatting**: Only displays the date of each transaction for clarity.
+- **Persistent History**: Transaction records remain accessible even after logging out or refreshing the app.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Description of changes"
+   ```
+4. Push your changes:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
 
 ## Author
 
 - **Okungbowa Godspower**
   - Email: [godspowerokungbowa0@gmail.com](mailto:godspowerokungbowa0@gmail.com)
   - GitHub: [OkungbowaGodspower](https://github.com/OkungbowaGodspower)
+ 

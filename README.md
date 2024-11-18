@@ -1,57 +1,115 @@
 # Zaapp
 
-Zaapp is a financial management app that helps users manage their savings goals, invest in stocks and mutual funds, and track transactions. It provides an intuitive interface for users to monitor their finances and make informed decisions about their investments and savings.
+Zaapp is a comprehensive financial management app designed to help users effectively manage their savings goals, track investments, and monitor financial transactions. With an intuitive interface and robust features, Zaapp empowers users to take control of their finances.
 
 ## Table of Contents
+
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Dashboard](#dashboard)
   - [Savings Goals](#savings-goals)
+  - [Invest in Stocks](#invest-in-stocks)
   - [Invest in Mutual Funds](#invest-in-mutual-funds)
+  - [Transaction History](#transaction-history)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Features
-- **User Authentication**: Ensures that only authenticated users can access their financial information.
-- **Persistent Balance**: User balances are stored and persist even after logging out and back in.
-- **Savings Goals**: Create multiple savings plans with target amounts, track progress, add funds, and withdraw once goals are reached.
-- **Invest in Stocks**: Choose from available stocks with specific return percentages, invest, and calculate returns over different time durations.
-- **Invest in Mutual Funds**: Select from various mutual funds, invest for custom durations, and see estimated returns.
-- **Transaction History**: Track all account transactions, including savings contributions, withdrawals, and investments.
-- **Error Handling with Modals**: User feedback is presented via modals for validation errors and successful operations.
+
+- **User Authentication**: Secure login and registration to protect financial data.
+- **Persistent Data**: Balances, savings goals, and transaction history are stored in local storage, ensuring persistence across sessions.
+- **Savings Goals**:
+  - Create and track multiple savings goals with target amounts.
+  - Add contributions from the current balance.
+  - Withdraw funds back to the current balance.
+  - Delete goals only if no money is saved.
+- **Invest in Mutual Funds**:
+  - Select funds with varying returns.
+  - Choose custom durations or preset options (3 months, 6 months, 1 year or custom time).
+- **Transaction History**: Comprehensive record of all user transactions, including savings contributions, loans, withdrawals, and investments.
+- **Modals for Feedback**: User actions and errors are communicated via modals for improved user experience.
+- **Dynamic Dashboard**: View account balance, transaction history, and investment opportunities in one place.
 
 ## Installation
-To run Zaapplocally, follow these steps:
+
+To set up and run Zaapp locally, follow these steps:
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/OkungbowaGodspower/Zaapp-Alx-Porfolio-Project.git
-2. Navigate into the directory:
+   ```
+2. Navigate to the project directory:
    ```bash
    cd zaapp
-3. Install the dependencies:
+   ```
+3. Install dependencies:
    ```bash
    npm install
+   ```
 4. Start the development server:
    ```bash
    npm start
+   ```
 
 ## Usage
+
 ### Dashboard
-The dashboard gives users an overview of their account balance, recent transactions, and investment options. It is designed to provide easy access to key features like savings goals, stocks, and mutual fund investments.
+
+The dashboard provides a clear overview of your financial activities:
+
+- **Account Balance**: Displays the current balance, with an option to hide or show it.
+- **Recent Transactions**: Lists recent activities, including savings, withdrawals, loans and investments.
+- **Navigation**: Access features like savings goals, transfers, and mutual funds with a single click.
 
 ### Savings Goals
-- **Create Goals:** Set up multiple savings plans by specifying a goal name and target amount.
-- **Add Funds:** Contribute to your savings goals, deducted from your current balance and record the transaction.
-- **Withdraw Funds:** Withdraw money once the goal target is reached, returning funds to your current balance.
-- **Delete Goals:** Remove savings goals, provided the current amount saved is zero.
-### Invest in Stocks
-- **Select Stocks:** Choose from a list of available stocks, each with a defined percentage return.
-- **Invest and Calculate Returns:** Invest in stocks over predefined durations (1 day, 3 days, 1 week) and see projected returns.
+
+- **Create Savings Goals**: Add a goal name and target amount to create a new savings plan.
+- **Contribute to Goals**: Deduct funds from your balance to contribute to a goal. Contributions are recorded as transactions.
+- **Withdraw Funds**: Transfer money from a goal back to your balance anytime, creating a transaction record.
+- **Track Progress**: Monitor goal completion percentages based on contributions.
+- **Delete Goals**: Goals can be deleted only when their balance is zero.
+
 ### Invest in Mutual Funds
-- **Choose Funds:** Select from various mutual funds with different percentage returns.
-- **Custom Investment Durations:** Choose from preset durations (3 months, 6 months, 1 year) or specify a custom duration to calculate potential returns.
+
+- **Explore Mutual Funds**: Choose from a variety of funds with percentage-based returns.
+- **Flexible Durations**: Select a predefined duration (3 months, 6 months, 1 year) or set a custom period.
+- **Projected Returns**: See an estimate of potential returns before investing.
+
+### Transaction History
+
+- **View Records**: Access a detailed table of all transactions, including:
+  - Savings goal contributions and withdrawals.
+  - Stock and mutual fund investments.
+  - Fund transfers and more.
+- **Date Formatting**: Only displays the date of each transaction for clarity.
+- **Persistent History**: Transaction records remain accessible even after logging out or refreshing the app.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Description of changes"
+   ```
+4. Push your changes:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ## Author
-the author of this project include:
-- Okungbowa Godspower <godspowerokungbowa0@gmail.com> (https://github.com/OkungbowaGodspower)
+
+- **Okungbowa Godspower**
+  - Email: [godspowerokungbowa0@gmail.com](mailto:godspowerokungbowa0@gmail.com)
+  - GitHub: [OkungbowaGodspower](https://github.com/OkungbowaGodspower)

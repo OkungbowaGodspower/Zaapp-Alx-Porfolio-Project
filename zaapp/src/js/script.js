@@ -53,31 +53,31 @@ document.addEventListener("DOMContentLoaded", function () {
 ///////////////////////////////////////////////////////////
 // Sticky navigation based on scroll position
 
-document.addEventListener("DOMContentLoaded", function () {
-  const sectionHeroEl = document.querySelector(".section-hero");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const sectionHeroEl = document.querySelector(".section-hero");
 
-  if (sectionHeroEl) {
-    const obs = new IntersectionObserver(
-      function (entries) {
-        const ent = entries[0];
+//   if (sectionHeroEl) {
+//     const obs = new IntersectionObserver(
+//       function (entries) {
+//         const ent = entries[0];
 
-        if (!ent.isIntersecting) {
-          document.body.classList.add("sticky");
-        } else {
-          document.body.classList.remove("sticky");
-        }
-      },
-      {
-        root: null,
-        threshold: 0,
-        rootMargin: "-80px",
-      }
-    );
-    obs.observe(sectionHeroEl);
-  } else {
-    // console.warn("Element with class 'section-hero' not found.");
-  }
-});
+//         if (!ent.isIntersecting) {
+//           document.body.classList.add("sticky");
+//         } else {
+//           document.body.classList.remove("sticky");
+//         }
+//       },
+//       {
+//         root: null,
+//         threshold: 0,
+//         rootMargin: "-10px",
+//       }
+//     );
+//     obs.observe(sectionHeroEl);
+//   } else {
+//     // console.warn("Element with class 'section-hero' not found.");
+//   }
+// });
 
 ///////////////////////////////////////////////////////////
 // Safari flexbox gap property fix

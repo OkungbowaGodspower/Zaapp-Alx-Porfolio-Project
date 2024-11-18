@@ -1,0 +1,624 @@
+/* Primary color */
+:root {
+  --primary-color: #0066f5;
+  --primary-color-mid: #0a2e65;
+  --secondary-color: #dfe3ff;
+  --secondary-color-mid: #6c82a3;
+  --white: #ffffff;
+  --black: #000000;
+}
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* percentage of user's browser font-size setting
+  <LineChart data={balanceHistory}>  */
+  font-size: 62.5% !important;
+
+  /* for the transition horizontally */
+  overflow-x: hidden;
+
+  /* scroll-behavior: smooth; 
+    const [isModalOpen, setIsModalOpen] = useState(false);*/
+}
+/* Sidebar base styles */
+.sidebar {
+  width: 60px; /* Collapsed width */
+  height: 100dvh;
+  background-color: #f5f6fa;
+  position: fixed;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* To hide the text when collapsed */
+}
+
+.sidebar.open {
+  width: 250px; /* Expanded width */
+}
+
+.sidebar-header {
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--primary-color-mid);
+  display: none;
+  /* font-size: 1.5rem; */
+}
+
+.sidebar.open .sidebar-header {
+  display: block;
+  transition: all 1s ease-in;
+}
+
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: var(--primary-color-mid);
+  font-size: 3.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  justify-content: center; /* Center icons when sidebar is collapsed */
+}
+
+.sidebar-item:hover {
+  background-color: rgba(0, 102, 245, 0.07);
+}
+
+.sidebar-item .fa-icon {
+  margin-right: 0px;
+  font-size: 2rem;
+}
+
+.sidebar-item span {
+  display: none; /* Hide text when sidebar is collapsed */
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: start;
+  align-items: start;
+  justify-content: flex-start;
+  margin-left: 15px;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis;
+  /* position: absolute; Position the tooltip absolutely */
+  /* top: 100%; */
+  /* z-index: 20000; */
+}
+.sidebar-item:hover span {
+  display: block;
+}
+.sidebar.open .sidebar-item {
+  justify-content: flex-start; /* Align items when expanded */
+}
+
+.sidebar.open .sidebar-item span {
+  display: inline;
+  font-size: 1.5rem;
+  transition: all 1s ease-in;
+}
+.height {
+  margin-top: 40px;
+}
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: var(--primary-color-mid);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it's always visible */
+  text-align: start;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.main-content {
+  margin-left: 60px;
+  padding: 20px 20px 0px 20px;
+  transition: margin-left 0.3s ease;
+  border-top-left-radius: 11px;
+}
+
+.main-content.overlay {
+  margin-left: 250px;
+}
+.account-overview.open {
+  width: 97%; /* Expanded width 83*/
+  left: 17.2%;
+  transition: left 1s ease-out;
+}
+.account-overview {
+  position: fixed;
+  top: 0;
+  left: 4%;
+  width: 97%;
+  background-color: #f5f6fa; /* Adjust the background color as needed */
+  padding: 10px 10px 0px 10px; /* Adjust the padding as needed */
+  z-index: 1000; /* Ensure it's always on top */
+  transition: margin-left -0.3s ease;
+}
+.overview-text {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--primary-color-mid);
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.overview-text.open {
+  margin-left: -14%;
+}
+
+.atm-card {
+  background-color: var(--primary-color-mid);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 10px 9px rgba(64, 25, 109, 0.2);
+}
+.atm-card h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  font-weight: 600;
+  /* margin-bottom: 50px; */
+  /* margin-top: 20px; */
+}
+.flex-board {
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  display: flex;
+  justify-content: space-between !important;
+}
+.icon p {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.dashboard-amount span {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.balance {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: var(--white);
+  color: var(--primary-color-mid);
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 13px rgba(4, 0, 0, 0.05);
+}
+.grid-item h3 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.grid-item p {
+  font-size: 1.2rem;
+}
+.invest {
+  background-color: #e6ffe6;
+}
+.send {
+  background-color: #ffe6e6;
+}
+.loan {
+  background-color: #e6e6ff;
+}
+.action-button {
+  display: inline-block;
+  padding: 1rem 1.2rem;
+  border-radius: 9px;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 400;
+
+  /* Only necessary for the .btn itself */
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  margin-top: 1.6rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px 0 rgba(10, 46, 101, 0.08);
+}
+/* .action-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(10, 46, 101, 0.08);
+  } */
+.recent-transactions {
+  margin-top: 40px;
+}
+.recent-transactions h3 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 5px;
+  color: var(--primary-color-mid);
+  /* padding: 3rem; */
+}
+
+.table-container {
+  max-height: 260px; /* Adjust the height based on your preference */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border: none;
+  /* padding: 1rem; */
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  border-style: none;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.transactions-table th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 400;
+  position: sticky; /* Make table headers sticky */
+  top: 0; /* Stick to the top of the container */
+  z-index: 1; /* Ensure header stays on top */
+  letter-spacing: 0.5px;
+}
+
+.transactions-table td {
+  color: var(--secondary-color-mid);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.amount {
+  font-weight: 600 !important;
+}
+.transactions-table tr:hover {
+  /* background-color: #e6e6e6; */
+  background-color: #f5f6fa;
+}
+
+.balance-graph {
+  margin-top: 20px;
+  width: 100%;
+  color: var(--primary-color-mid);
+}
+
+/* .balance-chart-container {
+  width: 50%;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .balance-chart-container {
+    width: 100%;
+    margin-left: 0;
+  }
+} */
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+}
+
+.modal-content {
+  padding: 20px 20px 30px !important;
+  border-radius: 11px !important;
+  width: 500px;
+  text-align: center;
+  max-width: 500px;
+  margin: 2.75rem auto;
+  background-color: var(--white) !important;
+}
+
+.modal-transaction {
+  padding: 20px 20px 30px !important;
+  border-radius: 11px !important;
+  width: 80% !important;
+  text-align: center;
+  max-width: 70% !important;
+  margin: 2.75rem auto;
+  background-color: var(--white) !important;
+}
+
+.modal-content *:focus {
+  outline: none;
+}
+.modal-content h2 {
+  letter-spacing: 0.5px;
+  margin-bottom: 3.2rem !important;
+  font-weight: 400;
+  font-size: 2.2rem;
+  color: var(--primary-color-mid);
+}
+
+.modal-content p {
+  letter-spacing: 0.5px;
+  margin-bottom: 3.2rem !important;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--primary-color-mid);
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  border: none;
+  color: var(--secondary-color-mid);
+  border-radius: 9px;
+  transition: all 0.3s;
+  width: 80%;
+  margin: auto !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0px 4px 4px 1px rgba(0, 102, 245, 0.18) !important;
+}
+
+.modal-content .transfer-input {
+  margin-bottom: 20px !important;
+}
+
+.modal-content input::placeholder {
+  color: var(--secondary-color-mid);
+}
+
+.modal-content label {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.modal-content button {
+  margin: 20px 7px 0px 7px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 1.6rem;
+  color: white;
+  border-radius: 9px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 2px 4px 0 rgba(10, 46, 101, 0.08);
+}
+
+.send-loan,
+.apply-loan,
+.transfer-funds,
+.success-button,
+.apply-investment,
+.add-goal,
+.save-change {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px 1px rgba(0, 102, 245, 0.18);
+}
+.cancel-loan,
+.cancel-transfer,
+.cancel-investment,
+.close-modal-button,
+.close-button,
+.delete-plan,
+.alert-modal,
+.cancel-button,
+.cancel-withdraw {
+  background-color: #ff3333;
+  box-shadow: 0 4px 6px 1px rgba(0, 102, 245, 0.18);
+}
+
+.withdraw,
+.confirm-withdraw {
+  background-color: green;
+  box-shadow: 0 4px 6px 1px rgba(0, 102, 245, 0.18);
+}
+.add-funds {
+  background-color: white;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
+.button-padding {
+  margin-bottom: 3rem;
+}
+
+.thumbs {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: var(--primary-color-mid);
+  font-size: 3.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+}
+
+/* style eye icon */
+.eye-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* margin-left: 10px; */
+  margin-right: 10px;
+  /* margin-top: -5px; */
+}
+
+.eye-icon {
+  font-size: 1.5rem;
+  color: #6c82a3;
+  /* position: absolute; */
+  /* top: 36px; */
+  /* right: 190px; */
+  transition: color 0.3s;
+  display: flex;
+}
+
+/* .balance {
+  font-size: 1.5rem;
+  display: inline-block;
+} */
+
+/* .fa-icon {
+  margin-top: -30px;
+} */
+.dashboard-amount {
+  display: flex;
+  /* margin-top: -20px; */
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.redirect-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* saving goal */
+.savings-goals-section {
+  padding: 20px;
+}
+
+.goal-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 30px;
+  color: var(--primary-color-mid);
+}
+
+.goal-item p {
+  color: var(--secondary-color-mid);
+}
+
+.goal-item h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color-mid);
+  font-weight: 600;
+}
+
+.goal-item progress {
+  width: 100%;
+  font-weight: 600;
+}
+/* CSS for scrolling in the goals list */
+.goals-list {
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto;
+}
+.settings label {
+  display: block;
+}
+/* .settings-more {
+  margin-right: 2rem;
+}  */
+/* addTransaction({ 409
+          type: "withdraw",
+          amount: `₦${goal.currentAmount}`,
+          goalName: goal.name,
+          date: new Date().toLocaleString(),
+
+ <tr>
+                  <th></th>
+                  <th>Receiver's Full Name</th>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>ID</th>
+                  <th>Amount</th>
+                </tr>
+
+          tr key={transaction.id}>
+                    <td>{getTransactionIcon(transaction.type)}</td>
+                    <td>{transaction.fullName}</td>
+                    <td>{transaction.date}</td>
+                    <td>{transaction.type}</td>
+                    <td>TRX{transaction.id}</td>
+        }); */

@@ -1,5 +1,3 @@
-// src/components/useFlexboxGapFix.js
-
 import { useEffect } from "react";
 
 const useFlexboxGapFix = () => {

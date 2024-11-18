@@ -12,7 +12,6 @@ Zaapp is a comprehensive financial management app designed to help users effecti
   - [Invest in Mutual Funds](#invest-in-mutual-funds)
   - [Transaction History](#transaction-history)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -102,10 +101,6 @@ Contributions are welcome! To contribute:
    git push origin feature-name
    ```
 5. Open a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 

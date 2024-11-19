@@ -238,6 +238,25 @@ body {
   width: 100%;
 }
 
+.scrollable-container {
+  overflow: auto;
+  width: 100%;
+  /* For Firefox */
+  scrollbar-width: none;
+
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+}
+.scrollable-container::-webkit-scrollbar {
+  /* For Chrome, Safari, and Opera */
+  display: none;
+}
+
+.scrollable-chart {
+  width: 1200px;
+  overflow: hidden;
+}
+
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -372,7 +391,7 @@ body {
 }
 
 .balance-graph {
-  margin-top: 20px;
+  margin-top: 20px auto;
   width: 100%;
   color: var(--primary-color-mid);
   margin-top: 20px;

@@ -99,12 +99,4 @@
   .modal-content p {
     text-align: left !important;
   }
-  .scrollable-container {
-    overflow-x: auto;
-    width: 100%;
-  }
-
-  .scrollable-chart {
-    width: 1200px;
-  }
 }

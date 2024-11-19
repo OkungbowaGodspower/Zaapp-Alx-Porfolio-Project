@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { v4 as uuid4 } from "uuid";
@@ -73,38 +73,42 @@ const Dashboard = () => {
 
   const navigate = useNavigate();
 
-  // Close the sidebar in mobile view when an item is clicked
-  const handleSidebarItemClick = (modalType) => {
-    setActiveModal(modalType); // Set the active modal type
-    setSidebarOpen(false); // Close sidebar in mobile view
-  };
+  // Function to handle Escape key press
+  const handleEscKey = useCallback((e) => {
+    if (e.key === "Escape") {
+      setShowModal(false);
+      setActiveModal(null);
+    }
+  }, []);
 
-  // Close modal when clicking outside or pressing ESC
-  const closeModal = () => {
-    setShowModal(false);
-    setActiveModal(null); // Clear active modal
-    document.removeEventListener("keydown", handleEscKey); // Remove ESC listener
-  };
-
-  // Handle ESC key to close modal
-  const handleEscKey = (e) => {
-    if (e.key === "Escape") closeModal();
-  };
-
-  // Toggle sidebar visibility
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
-  // Attach ESC key listener when a modal is open
+  // Attach or remove the Escape key listener when the modal is active
   useEffect(() => {
     if (activeModal) {
       document.addEventListener("keydown", handleEscKey);
     } else {
       document.removeEventListener("keydown", handleEscKey);
     }
-    // eslint-disable-next-line
-  }, [activeModal]);
+    return () => {
+      document.removeEventListener("keydown", handleEscKey);
+    };
+  }, [activeModal, handleEscKey]);
+
+  // Toggle sidebar visibility
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  // Handle sidebar item click
+  const handleSidebarItemClick = (modalType) => {
+    setActiveModal(modalType); // Set the active modal type
+    setSidebarOpen(false); // Close sidebar in mobile view
+  };
+
+  // Close modal manually or by clicking outside
+  const closeModal = () => {
+    setShowModal(false);
+    setActiveModal(null); // Clear the active modal
+  };
 
   const closeSidebar = () => {
     setSidebarOpen(false);

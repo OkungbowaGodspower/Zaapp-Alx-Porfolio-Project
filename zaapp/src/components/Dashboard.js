@@ -31,7 +31,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "../styles/dashboard.css";
-import "../styles/dashQueries.css";
+import "../styles/dashqueries.css";
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
@@ -103,6 +103,7 @@ const Dashboard = () => {
     } else {
       document.removeEventListener("keydown", handleEscKey);
     }
+    // eslint-disable-next-line
   }, [activeModal]);
 
   const closeSidebar = () => {

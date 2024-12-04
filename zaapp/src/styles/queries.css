@@ -29,7 +29,7 @@
     font-size: 56.25%;
   }
   .grid {
-    column-gap: 4.8rem;
+    column-gap: 4.8rem !important;
     row-gap: 6.4rem;
   }
   .heading-secondary,
@@ -56,6 +56,9 @@
   }
   .logo {
     font-size: 3.5rem;
+  }
+  .transaction-header {
+    margin-left: 60px;
   }
 }
 
@@ -152,11 +155,11 @@
   }
   .main-nav-list {
     flex-direction: column;
-    gap: 4.8rem;
+    /* gap: 4.8rem; */
   }
   .main-nav-link:link,
   .main-nav-link:visited {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
   .delivered-text {
     font-size: 1.4rem;
@@ -166,8 +169,37 @@
     align-items: center;
     line-height: 2.5rem;
   }
+  .transactions-table td {
+    font-size: 1.4rem;
+  }
+  .nav-open .main-nav-list {
+    list-style: none;
+    text-align: left !important;
+    padding: 0;
+  }
 }
 
+@media (max-width: 53rem) {
+  .button-mark {
+    display: block !important;
+  }
+  .transaction-header {
+    display: inline-block !important;
+    margin-bottom: 40px;
+  }
+
+  .search-bar {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  .search-bar input {
+    display: inline-block;
+    width: 200px;
+  }
+  .back-to-dashboard-button {
+    margin-top: 10px;
+  }
+}
 /********************/
 /* BELOW 704PX (FOR SMALL TABLETS)*/
 /********************/
@@ -196,6 +228,33 @@
     grid-column: span 2;
     margin-bottom: 3.2rem;
   }
+  .logo,
+  .header-logo {
+    font-size: 4rem !important;
+  }
+  .in-pairs {
+    flex-direction: column;
+    gap: 1.2rem;
+    display: block;
+  }
+  .transaction-heading {
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin: 5px;
+    color: var(--primary-color-mid);
+  }
+  .sidebar {
+    width: 0px;
+  }
+  .main-content {
+    margin-left: 0px;
+  }
+  .transaction-header {
+    margin-left: 0px;
+  }
+  .table-container.full-page {
+    margin-left: 0px;
+  }
 }
 
 /********************/
@@ -205,6 +264,7 @@
 @media (max-width: 34rem) {
   .grid {
     row-gap: 4.8rem;
+    column-gap: 2rem !important;
   }
   .grid--2-cols,
   .grid--3-cols,
@@ -252,11 +312,20 @@
   }
   .btn--outline:link,
   .btn--outline:visited {
-    margin-top: 10px;
-    margin-left: -10px;
+    /* margin-top: 10px; */
+    margin-left: -5px;
+  }
+  .btn--outline:link,
+  .btn--outline:visited {
+    padding: 16px 32px;
   }
   .position-btn {
-    display: block;
+    display: flex;
+    flex-direction: row;
+  }
+  .transaction-heading {
+    font-size: 3rem;
+    margin-top: 0rem;
   }
 }
 

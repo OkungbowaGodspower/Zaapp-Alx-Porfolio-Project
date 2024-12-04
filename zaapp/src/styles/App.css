@@ -6,6 +6,21 @@
   --white: #ffffff;
   --black: #000000;
 }
+@font-face {
+  font-family: "Grotesk-heading";
+  src: url(../../fonts/PowerGrotesk-Regular.ttf) format(truetype);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Agane-paragraph";
+  src: url(../../fonts/Euclid\ Circular\ B\ Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roblox-logotype";
+  src: url(../../fonts/Roblox\ Font\ Regular.ttf) format(truetype);
+}
 
 * {
   padding: 0;
@@ -31,8 +46,9 @@ html {
 } */
 
 body {
-  font-family: Arial, sans-serif;
-  font-family: Montserrat !important;
+  /* /* font-family: Arial, sans-serif; */
+  /* font-family: Montserrat !important; */
+  font-family: "Agane-paragraph", Montserrat !important;
   line-height: 1;
   font-weight: 400;
   color: var(--secondary-color-mid);
@@ -58,9 +74,9 @@ body {
   row-gap: 9.6rem;
 }
 
-.grid:not(:last-child) {
+/* .grid:not(:last-child) {
   margin-bottom: 9.6rem;
-}
+} */
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
@@ -84,6 +100,7 @@ body {
   font-weight: 700;
   color: var(--primary-color-mid);
   letter-spacing: -0.5px;
+  font-family: "Grotesk-heading", Montserrat;
 }
 
 .heading-primary {
@@ -101,7 +118,7 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   margin-bottom: 3.2rem;
   color: var(--primary-color-mid);
@@ -254,4 +271,5 @@ strong {
 
 .direct-signup {
   list-style: none;
+  margin: 0;
 }

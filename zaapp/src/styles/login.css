@@ -16,6 +16,7 @@ a .login-logo {
   color: var(--primary-color);
   cursor: pointer;
   font-weight: bold;
+  font-family: Roblox-logotype;
 }
 
 .card {
@@ -35,7 +36,7 @@ a .login-logo {
   letter-spacing: 0.5px;
   margin-bottom: 3.2rem !important;
   font-weight: 400;
-  font-size: 4.4rem;
+  font-size: 3rem;
   color: var(--primary-color-mid);
   letter-spacing: -0.5px;
 }
@@ -45,6 +46,7 @@ a .login-logo {
   font-weight: 600;
   letter-spacing: -1px;
   margin-top: -26%;
+  font-family: "Grotesk-heading", Montserrat !important;
 }
 
 .action-text {
@@ -140,9 +142,10 @@ form .btn {
   position: absolute;
   right: 6rem !important;
   transform: translateY(-50%);
-  top: 31.5rem !important;
+  top: 29.7rem !important;
   cursor: pointer;
   transition: all 0.3s;
+  padding-right: 1rem;
 }
 
 .password-toggle {
@@ -270,11 +273,12 @@ a {
 
 @media (max-width: 34rem) {
   .header-text {
-    font-size: 3rem;
+    font-size: 4.4rem;
+    margin-top: 8rem;
   }
 
   .password-toggle-icon {
-    top: 36.8rem !important;
+    top: 29.8rem !important;
     right: 18rem;
   }
 }

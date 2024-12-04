@@ -21,6 +21,10 @@ html {
 
 /*! *********************************** */
 
+.container {
+  padding: 2rem !important;
+}
+
 /********************/
 /* HEADER */
 /********************/
@@ -32,10 +36,19 @@ html {
   height: 9.6rem;
   padding: 0 4.8rem;
   position: relative;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+
+  transform: translateY(0); /* Default: Visible */
+  opacity: 1; /* Fully opaque */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  will-change: transform, opacity;
+  /* transform: translateY(-100%); 
+  opacity: 1; 
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;  */
 }
 
 .logo {
+  font-family: Roblox-logotype;
   font-size: 4.8rem !important;
   color: var(--primary-color);
   cursor: pointer;
@@ -45,24 +58,32 @@ html {
 /********************/
 /* NAVIGATION */
 /********************/
-
+.main-nav-list li {
+  align-items: center !important;
+}
 .main-nav-list {
   list-style: none;
   display: flex;
   gap: 4.8rem;
+  margin-top: 15px;
+  z-index: 5000;
 }
 
 .main-nav-link:link,
 .main-nav-link:visited {
   text-decoration: none;
   color: var(--secondary-color-mid);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   transition: all 0.3s;
 }
 
 .main-nav-link:hover {
   color: var(--primary-color-mid);
+  /* transform: scale(1.1); */
+}
+
+.hover-effect:hover {
   transform: scale(1.1);
 }
 
@@ -78,7 +99,7 @@ html {
 .blank:link,
 .blank:visited {
   color: var(--primary-color);
-  padding: 1.2rem 2.4rem;
+  padding: 1.1rem 2.3rem;
   border-radius: 9px;
   border: 1px solid var(--primary-color);
 }
@@ -102,7 +123,7 @@ html {
 .icon-mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
-  color: var(--primary-color-dark);
+  color: var(--primary-color);
 }
 
 .icon-mobile-nav[name="close-outline"] {
@@ -124,13 +145,27 @@ html {
   background-color: var(--white);
   z-index: 9999;
   box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
-  transition: top 0.3s ease-in-out;
+
+  transform: translateY(0); /* Slide into place */
+  opacity: 1; /* Fully visible */
 }
 
-.sticky .section-hero {
+.sticky .header.sticky-entering {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.sticky .heading-primary {
   margin-top: 9.6rem;
 }
+body.sticky .header {
+  transform: translateY(0);
+}
 
+.sticky.header.sticky-entering {
+  transform: translateY(0);
+  opacity: 1;
+}
 /********************/
 /* HERO SECTION */
 /********************/
@@ -172,6 +207,7 @@ html {
   justify-content: center;
   margin-top: 8rem;
   gap: 1.6rem;
+  margin: 6rem 0;
 }
 
 .delivered-img {
@@ -214,8 +250,7 @@ html {
 /********************/
 
 .section-featured {
-  /* padding: 4.8rem 0 4.8rem 0; */
-  padding: 4.8rem 0 9.6rem 0;
+  padding: 4.8rem 0 4.8rem 0;
   background-color: var(--secondary-color);
 }
 
@@ -227,6 +262,7 @@ html {
   text-align: center;
   font-weight: 600;
   color: var(--primary-color-mid);
+  font-family: "Grotesk-heading", Montserrat;
 }
 
 .logo-container {
@@ -247,14 +283,22 @@ html {
 
 .section-how {
   padding: 9.6rem 0;
+  position: relative;
+  background-image: url("../static/img/section-backdrop.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  padding: 50px 0;
+  margin: 18rem 0;
 }
 
 .step-text-box {
-  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
-  padding: 3rem 3rem 6rem 3rem;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.01);
+  padding: 2.4rem 3.2rem 3.2rem 3.2rem;
   border-radius: 9px;
   background-color: var(--white);
-  transition: transform 0.2s;
 }
 
 .step-text-box:hover {
@@ -309,7 +353,7 @@ html {
 }
 
 .step-number ion-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--white);
   background-color: var(--primary-color);
   padding: 1rem;
@@ -325,6 +369,25 @@ html {
   padding: 1.5rem;
   border-radius: 50%;
 }
+
+.container {
+  position: relative;
+}
+
+.container .step-text-box {
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.container:hover .step-text-box:not(:hover) {
+  opacity: 0.7;
+  filter: grayscale(1);
+}
+
+.container .step-text-box:hover {
+  opacity: 1;
+  filter: none;
+}
+
 /********************/
 /* MEALS SECTION */
 /********************/
@@ -374,7 +437,7 @@ html {
   color: var(--primary-color);
   border-radius: 50%;
   letter-spacing: 0.1px;
-  padding: 1.5rem;
+  padding: 0rem;
   font-size: 2.6rem;
   font-weight: 700;
 }
@@ -390,6 +453,7 @@ html {
   line-height: 1.2;
   margin-top: 2.4rem;
   margin-bottom: 4rem;
+  font-family: "Grotesk-heading", Montserrat;
 }
 
 .meal-img {
@@ -465,7 +529,7 @@ ul.meal-attributes {
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 1.8rem;
-  color: var(--secondary-color-mid);
+  color: var(--primary-color-mid);
 }
 q {
   font-style: italic;
@@ -473,7 +537,7 @@ q {
 
 .testimonial-name {
   font-size: 1.4rem;
-  color: var(--primary-color-mid);
+  color: var(--secondary-color-mid);
 }
 
 .gallery {
@@ -646,7 +710,7 @@ q {
       rgba(151, 137, 218, 0.35),
       rgba(204, 192, 238, 0.35)
     ),
-    url("../static/img/cta-pic-2.png");
+    url("../static/img/cta-picture.jpg");
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -773,6 +837,7 @@ ul.social-links {
   font-weight: 500;
   margin-bottom: 4rem;
   color: var(--primary-color-mid);
+  font-family: "Grotesk-heading", Montserrat;
 }
 
 .footer-nav {

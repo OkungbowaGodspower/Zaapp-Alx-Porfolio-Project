@@ -10,6 +10,7 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <title>Zaapp - Banking Made Easy</title>
+    <link rel="preload" href="logo192.png" as="image" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -57,9 +58,32 @@
     <link rel="stylesheet" href="../src/index.css" />
     <link rel="stylesheet" href="../src/queries.css" />
     <title>Zaapp | Banking Made Easy</title>
+    <style>
+      /* Splash screen styling */
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff; /* Matches manifest background */
+        z-index: 9999;
+      }
+      #splash-screen img {
+        width: 120px;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Splash screen -->
+    <div id="splash-screen">
+      <img src="logo192.png" alt="Zaapp Logo" />
+    </div>
     <noscript>You need to enable JavaScript to run this app</noscript>
     <div id="root"></div>
 

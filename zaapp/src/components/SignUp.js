@@ -5,9 +5,11 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { Modal, Button, Card, Form } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 import Loader from "./Loader";
+import Navbar from "./Navbar";
 import "../styles/signup.css";
 import "../styles/App.css";
 import "../styles/modal.css";
+import "../components/useStickyNav";
 
 const SignUp = () => {
   const [fullName, setFullName] = useState("");
@@ -36,10 +38,11 @@ const SignUp = () => {
       .find((user) => user.email === email);
 
     if (existingUser) {
-      setModalMessage("User already exists! Log in.");
+      setModalMessage("User already exists! Redirecting to login...");
       setIsSuccess(false);
       setShowModal(true);
       setIsLoading(false);
+
       return;
     }
 
@@ -64,10 +67,20 @@ const SignUp = () => {
     localStorage.setItem("session", JSON.stringify(userData));
 
     // Show success modal and redirect after closing
-    setModalMessage("Registration successful! Redirecting to login...");
+    //   setModalMessage("Registration successful! Redirecting to login...");
+    //   setIsSuccess(true);
+    //   setShowModal(true);
+    //   setIsLoading(false);
+    // };
+    setModalMessage(
+      "Registration successful! Redirecting to your dashboard..."
+    );
     setIsSuccess(true);
     setShowModal(true);
-    setIsLoading(false);
+
+    setTimeout(() => {
+      navigate("/dashboard");
+    }, 3000);
   };
 
   const togglePasswordVisibility = () => {
@@ -79,14 +92,18 @@ const SignUp = () => {
     if (isSuccess) {
       navigate("/login");
     }
+
+    setIsLoading(false);
+    navigate("/dashboard");
   };
 
   return (
     <div className="container-signup signup-container">
       {isLoading && <Loader />}
-      <a href="/">
+      <Navbar />
+      {/* <a href="/">
         <h1 className="signup-logo">Zaapp</h1>
-      </a>
+      </a> */}
       <div className="block">
         <h2 className="header-text">Start your journey</h2>
         <p className="action-text">Sign up to get started</p>

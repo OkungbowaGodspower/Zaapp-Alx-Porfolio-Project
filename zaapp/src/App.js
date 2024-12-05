@@ -8,6 +8,9 @@ import TransactionHistory from "./components/TransactionHistory";
 import Investments from "./components/Investments";
 import Navbar from "./components/Navbar";
 import Home from "./home";
+import About from "./about";
+import Services from "./services";
+import Company from "./company";
 import useStickyNav from "./components/useStickyNav";
 import useFlexboxGapFix from "./components/useFlexboxGapFix";
 
@@ -36,11 +39,22 @@ const App = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const splashScreen = document.getElementById("splash-screen");
+    if (splashScreen) {
+      splashScreen.style.opacity = "0"; // Fade-out effect
+      setTimeout(() => splashScreen.remove(), 4000); // Remove after fade-out
+    }
+  }, []);
+
   return (
     <Router>
       {/* <Navbar /> Navbar should always be visible */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/company" element={<Company />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />

@@ -12,13 +12,14 @@ Zaapp is a comprehensive financial management app designed to help users effecti
   - [Invest in Mutual Funds](#invest-in-mutual-funds)
   - [Transaction History](#transaction-history)
   - [Bills Payment](#bills-payment)
+  - [Loan Management](#loan-management)
 - [Contributing](#contributing)
 - [Author](#author)
 
 ## Features
 
 - **User Authentication**: Secure login and registration to protect financial data.
-- **Persistent Data**: Balances, savings goals, bill payment records, and transaction history are stored in local storage, ensuring persistence across sessions.
+- **Persistent Data**: Balances, savings goals, bill payment records, loan balance, and transaction history are stored in local storage, ensuring persistence across sessions.
 - **Savings Goals**:
   - Create and track multiple savings goals with target amounts.
   - Add contributions from the current balance.
@@ -39,7 +40,12 @@ Zaapp is a comprehensive financial management app designed to help users effecti
     - Smart card numbers for subscriptions.
     - Meter numbers for electricity.
   - Payment history is recorded in the transaction table.
-- **Transaction History**: Comprehensive record of all user transactions, including savings contributions, loans, withdrawals, investments, and bill payments.
+- **Loan Management**:
+  - Apply for loans with adjustable limits based on user activity (e.g., ₦1 million, ₦5 million, ₦10 million).
+  - Repay loans with the ability to track balance.
+  - Record loan transactions in the transaction history.
+  - Loan repayments unlock higher borrowing limits.
+- **Transaction History**: Comprehensive record of all user transactions, including savings contributions, loans, withdrawals, investments, bill payments, and loan repayments.
 - **Dynamic Dashboard**: View account balance, recent transactions, and quick navigation to key features.
 - **Modals for Feedback**: User actions and errors are communicated via modals for improved user experience.
 
@@ -111,6 +117,14 @@ The dashboard provides a clear overview of your financial activities:
   - **Subscriptions**: Input 10-digit smart card number.
   - **Electricity**: Input meter number.
 - **Transaction Records**: Payments are logged in the transaction table with the provider name and amount.
+
+### Loan Management
+
+- **Apply for Loans**: Users can request loans, with adjustable loan limits based on previous repayments:
+  - **₦1,000,000** initially, **₦5,000,000** after repaying **₦1,000,000**, and up to **₦10,000,000** after repaying **₦5,000,000**.
+- **Loan Repayment**: Make repayments with an updated balance and repayment tracking.
+- **Track Loan Balance**: Monitor remaining loan balance and progress toward repayment.
+- **Transaction History**: Loans and repayments are recorded in the transaction table.
 
 ## Contributing
 

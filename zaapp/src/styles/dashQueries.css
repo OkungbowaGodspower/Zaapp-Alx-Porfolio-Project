@@ -66,6 +66,7 @@
   }
   .atm-card {
     width: 100%;
+    padding: 15px;
   }
   .bills-section {
     margin-bottom: 5rem;
@@ -103,6 +104,7 @@
   }
   .atm-card {
     width: 100%;
+    padding: 15px;
   }
 
   .balance {

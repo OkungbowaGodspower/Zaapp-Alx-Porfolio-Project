@@ -1,0 +1,33 @@
+li {
+  display: block !important;
+  align-items: start !important;
+  gap: 1.2rem;
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-bottom: 1rem;
+}
+.list-type li {
+  font-style: italic;
+}
+.list-type {
+  flex-direction: column;
+  gap: 1.2rem;
+  display: block;
+}
+ul,
+ol {
+  padding-left: 0rem !important;
+  padding-bottom: 1.2rem !important;
+}
+.meal-attribute-line {
+  font-size: 1.8rem;
+  display: inline-block;
+  align-items: center;
+  column-gap: 1rem;
+  color: var(--secondary-color-mid);
+}
+.blue {
+  color: var(--primary-color);
+  font-weight: 900;
+  font-style: normal;
+}

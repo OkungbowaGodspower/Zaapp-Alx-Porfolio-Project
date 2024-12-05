@@ -8,15 +8,15 @@
   position: relative;
 }
 
-.signup-logo {
-  /* margin: 0; */
-  margin-top: -60%;
+a .signup-logo {
+  margin-top: -30%;
   left: 0%;
   position: absolute;
   font-size: 3.8rem !important;
   color: var(--primary-color);
   cursor: pointer;
   font-weight: bold;
+  font-family: Roblox-logotype;
 }
 
 .card {
@@ -35,23 +35,24 @@
   letter-spacing: 0.5px;
   margin-bottom: 3.2rem !important;
   font-weight: 400;
-  font-size: 4.4rem;
+  font-size: 3rem;
   color: var(--primary-color-mid);
   letter-spacing: -0.5px;
 }
 
 .header-text {
   font-size: 6rem;
-  font-weight: 900;
-  letter-spacing: 0px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-family: "Grotesk-heading", Montserrat !important;
 }
 
 .action-text {
-  font-size: 1.8rem;
-  font-size: 600;
+  font-size: 1.6rem;
+  margin-top: -20px;
   margin-top: -20px;
   color: var(--secondary-color-mid);
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
@@ -60,7 +61,7 @@ label {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
-  color: var(--primary-color);
+  color: var(--primary-color-mid);
 }
 
 .form-group {
@@ -95,7 +96,8 @@ form .form-check {
   font-size: 1.2rem;
 }
 
-form .btn {
+form .btn,
+.btn {
   display: inline-block;
   padding: 1.6rem 1.2rem;
   border-radius: 9px;
@@ -103,12 +105,16 @@ form .btn {
   text-decoration: none;
   transition: all 0.3s;
   font-weight: 400;
-
-  /* Only necessary for the .btn itself */
   cursor: pointer;
   border: none;
   font-family: inherit;
+}
+form .btn {
   width: 100%;
+}
+.title {
+  font-size: 2rem !important;
+  color: #0a2e65 !important;
 }
 
 .btn-primary {
@@ -127,10 +133,11 @@ form .btn {
   font-size: 1.6rem;
   position: absolute;
   right: 6rem !important;
-  top: 41rem !important;
+  top: 39.5rem !important;
   transform: translateY(-50%);
   cursor: pointer;
   transition: all 0.3s;
+  padding-right: 1rem;
 }
 
 .login-link {
@@ -156,6 +163,7 @@ form .btn {
   }
   .header-text {
     margin-left: 7%;
+    margin-top: -25%;
     font-size: 6rem;
     width: 600px;
     overflow: hidden;
@@ -177,7 +185,7 @@ form .btn {
   .container-signup {
     display: block;
   }
-  .signup-logo {
+  a .signup-logo {
     margin-top: 0%;
     left: 0%;
     position: relative;
@@ -193,6 +201,7 @@ form .btn {
     justify-content: center;
     padding-top: 10%;
     width: 100%;
+    margin-top: 8rem;
   }
   .action-text {
     margin: 0 auto;
@@ -235,10 +244,10 @@ form .btn {
 
 @media (max-width: 30.25rem) {
   .header-text {
-    font-size: 3rem;
+    font-size: 4.4rem;
   }
   .password-wrapper1 .password-toggle-icon {
-    top: 46.4rem !important;
+    top: 39.4rem !important;
     right: 6rem;
   }
 }

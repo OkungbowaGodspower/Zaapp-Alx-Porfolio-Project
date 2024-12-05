@@ -1,6 +1,6 @@
 # Zaapp
 
-Zaapp is a comprehensive financial management app designed to help users effectively manage their savings goals, track investments, and monitor financial transactions. With an intuitive interface and robust features, Zaapp empowers users to take control of their finances.
+Zaapp is a comprehensive financial management app designed to help users effectively manage their savings goals, track investments, pay bills, and monitor financial transactions. With an intuitive interface and robust features, Zaapp empowers users to take control of their finances.
 
 ## Table of Contents
 
@@ -11,12 +11,14 @@ Zaapp is a comprehensive financial management app designed to help users effecti
   - [Savings Goals](#savings-goals)
   - [Invest in Mutual Funds](#invest-in-mutual-funds)
   - [Transaction History](#transaction-history)
+  - [Bills Payment](#bills-payment)
 - [Contributing](#contributing)
+- [Author](#author)
 
 ## Features
 
 - **User Authentication**: Secure login and registration to protect financial data.
-- **Persistent Data**: Balances, savings goals, and transaction history are stored in local storage, ensuring persistence across sessions.
+- **Persistent Data**: Balances, savings goals, bill payment records, and transaction history are stored in local storage, ensuring persistence across sessions.
 - **Savings Goals**:
   - Create and track multiple savings goals with target amounts.
   - Add contributions from the current balance.
@@ -24,10 +26,22 @@ Zaapp is a comprehensive financial management app designed to help users effecti
   - Delete goals only if no money is saved.
 - **Invest in Mutual Funds**:
   - Select funds with varying returns.
-  - Choose custom durations or preset options (3 months, 6 months, 1 year or custom time).
-- **Transaction History**: Comprehensive record of all user transactions, including savings contributions, loans, withdrawals, and investments.
+  - Choose custom durations or preset options (3 months, 6 months, 1 year, or custom time).
+- **Bills Payment**:
+  - Pay for electricity, airtime, internet, and subscriptions.
+  - Select providers based on the service type:
+    - **Electricity**: IKEDC NG, IBEDC NG, AEDC NG, EKEDC NG.
+    - **Airtime**: AIRTEL NG, MTN NG, GLO NG, 9MOBILE NG.
+    - **Internet**: MTN NG, AIRTEL NG, GLO NG, 9MOBILE NG, SPECTRANET NG, SWIFT NG, iPNX NG, SMILE NG.
+    - **Subscriptions**: DSTV, GoTV NG, SHOWMAX, AMAZON, STARTIMES, NETFLIX.
+  - Dynamically update input fields based on the selected provider:
+    - Phone numbers for airtime and some internet providers (formatted as `+234 XXX XXXX XXXX`).
+    - Smart card numbers for subscriptions.
+    - Meter numbers for electricity.
+  - Payment history is recorded in the transaction table.
+- **Transaction History**: Comprehensive record of all user transactions, including savings contributions, loans, withdrawals, investments, and bill payments.
+- **Dynamic Dashboard**: View account balance, recent transactions, and quick navigation to key features.
 - **Modals for Feedback**: User actions and errors are communicated via modals for improved user experience.
-- **Dynamic Dashboard**: View account balance, transaction history, and investment opportunities in one place.
 
 ## Installation
 
@@ -57,8 +71,8 @@ To set up and run Zaapp locally, follow these steps:
 The dashboard provides a clear overview of your financial activities:
 
 - **Account Balance**: Displays the current balance, with an option to hide or show it.
-- **Recent Transactions**: Lists recent activities, including savings, withdrawals, loans and investments.
-- **Navigation**: Access features like savings goals, transfers, and mutual funds with a single click.
+- **Recent Transactions**: Lists recent activities, including savings, withdrawals, loans, investments, and bill payments.
+- **Navigation**: Access features like savings goals, transfers, bill payments, and mutual funds with a single click.
 
 ### Savings Goals
 
@@ -78,10 +92,25 @@ The dashboard provides a clear overview of your financial activities:
 
 - **View Records**: Access a detailed table of all transactions, including:
   - Savings goal contributions and withdrawals.
+  - Bill payments.
   - Stock and mutual fund investments.
-  - Fund transfers and more.
+  - Fund transfers.
 - **Date Formatting**: Only displays the date of each transaction for clarity.
 - **Persistent History**: Transaction records remain accessible even after logging out or refreshing the app.
+
+### Bills Payment
+
+- **Service Types**:
+  - Electricity, Airtime, Internet, Subscriptions.
+- **Provider Selection**: Choose from a list of providers based on the service type.
+- **Dynamic Inputs**:
+  - **Airtime**: Phone number formatted as `+234 XXX XXXX XXXX`.
+  - **Internet**:
+    - For MTN NG, AIRTEL NG, GLO NG, 9MOBILE NG: Phone number required.
+    - For others: Card number required.
+  - **Subscriptions**: Input 10-digit smart card number.
+  - **Electricity**: Input meter number.
+- **Transaction Records**: Payments are logged in the transaction table with the provider name and amount.
 
 ## Contributing
 
@@ -107,4 +136,3 @@ Contributions are welcome! To contribute:
 - **Okungbowa Godspower**
   - Email: [godspowerokungbowa0@gmail.com](mailto:godspowerokungbowa0@gmail.com)
   - GitHub: [OkungbowaGodspower](https://github.com/OkungbowaGodspower)
- 

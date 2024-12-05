@@ -1,29 +1,34 @@
-// src/components/useStickyNav.js
-
 import { useEffect } from "react";
 
 const useStickyNav = () => {
   useEffect(() => {
-    const sectionHeroEl = document.querySelector(".section-hero");
+    const sentinelEl = document.querySelector(".sentinel");
+    const headerEl = document.querySelector(".header");
 
-    if (sectionHeroEl) {
-      const obs = new IntersectionObserver(
+    if (sentinelEl && headerEl) {
+      const observer = new IntersectionObserver(
         (entries) => {
-          const ent = entries[0];
+          const entry = entries[0];
 
-          if (!ent.isIntersecting) {
+          if (!entry.isIntersecting) {
+            // Add sticky class to trigger CSS animation
             document.body.classList.add("sticky");
           } else {
+            // Remove sticky class when sentinel is in view
             document.body.classList.remove("sticky");
           }
         },
         {
-          root: null,
-          threshold: 0,
-          rootMargin: "-80px",
+          root: null, // Viewport as the root
+          threshold: 0, // Trigger as soon as sentinel is out of view
         }
       );
-      obs.observe(sectionHeroEl);
+
+      // Start observing the sentinel element
+      observer.observe(sentinelEl);
+
+      // Cleanup observer on component unmount
+      return () => observer.disconnect();
     }
   }, []);
 };

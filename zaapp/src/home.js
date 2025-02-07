@@ -241,8 +241,10 @@ function Home() {
                 <li className="meal-attribute">
                   <span>
                     Get the Zaapp App on GitHub by cloning, using this link{" "}
-                    <a href="https://github.com/your-repo/zaapp">Zaapp App</a>{" "}
-                    or using <a href="https://www.netlify.com">Netlify</a>.
+                    <a href="https://github.com/OkungbowaGodspower/Zaapp-Alx-Porfolio-Project">
+                      Zaapp App
+                    </a>{" "}
+                    or using <a href="https://app-zaapp.vercel.app">Vercel</a>.
                   </span>
                 </li>
               </ul>

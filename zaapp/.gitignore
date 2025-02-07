@@ -8,6 +8,14 @@
 # testing
 /coverage
 
+/build/
+.vscode/
+node_modules/
+*.lock
+ssh-keygen*
+*.map
+
+
 # misc
 .DS_Store
 .env.local
@@ -18,3 +26,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/build/

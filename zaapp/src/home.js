@@ -172,7 +172,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-featured" id="learn">
+      <section className="section section-featured" id="learn">
         <div className="container">
           <h2 className="heading-featured-in">As featured in</h2>
           <div className="logo-container">
@@ -184,7 +184,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-how" id="how-it-works">
+      <section className="section section-how" id="how-it-works">
         <div className="container backdrop">
           <h2 className="heading-secondary">Why choose Zaapp?</h2>
         </div>
@@ -224,7 +224,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-meals" id="meals">
+      <section className="section section-meals " id="meals">
         <div className="container center-text">
           <h2 className="heading-secondary">
             Getting started with the Zaapp app
@@ -284,7 +284,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-testimonial" id="testimonial">
+      <section className="section section-testimonial" id="testimonial">
         <div className="testimonials-container">
           <h2 className="heading-secondary">Why not give it a try?</h2>
           <div className="testimonials">
@@ -351,8 +351,8 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section-pricing" id="pricing"></section>
-      <section className="section-cta" id="cta">
+      <section className="section section-pricing " id="pricing"></section>
+      <section className="section-cta " id="cta">
         <div className="container">
           <div className="cta">
             <div className="cta-text-box">
